@@ -45,7 +45,7 @@ body {
 nav {
   display: flex;
   width: 100%;
-  height: 80px;
+  height: 100px;
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
@@ -60,6 +60,28 @@ nav .menu {
   display: flex;
   width: 400px;
   justify-content: space-between;
+  transition: all ease-in-out 0.35s;
+}
+.burger-menu {
+  height: 30px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+  z-index: 9;
+  cursor: pointer;
+  transition: all ease-in-out 0.35s;
+}
+.burger-menu .burger {
+  background-image: url('../images/icon-menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .menu a {
@@ -71,6 +93,35 @@ nav .menu {
 
 .menu a:hover {
   color: var(--softRed);
+}
+
+main {
+  width: 100%;
+  height: 600px;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+main .top-headline {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+  grid-template-columns: 2;
+  overflow: hidden;
+}
+
+.top-headline .head-image {
+  width: 800px;
+  height: 500px;
+  /* overflow: hidden; */
+}
+.head-image img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -88,17 +139,32 @@ nav .menu {
   .blur-screen.active {
     display: block;
   }
-  .menu {
-    position: fixed;
-    flex-direction: column;
-    background-color: #000;
-    right: 0;
-    max-width: 300px;
-    top: 0;
+  nav .menu {
+    display: none;
+  }
+  nav .menu.active {
+    position: absolute;
     bottom: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    width: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 0 30px;
+    transition: display ease-in-out 0.35s;
+    background-color: #fff;
+  }
+  .menu a {
+    color: var(--veryDarkBlue);
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu.active .burger {
+    background-image: url('../images/icon-menu-close.svg');
   }
 }
