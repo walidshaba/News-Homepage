@@ -13,3 +13,10 @@ burger.addEventListener('click', () => {
     blurScreen.classList.remove('active');
   }
 });
+blurScreen.addEventListener('click', () => {
+  if (burger.className == 'burger-menu active') {
+    burger.classList.remove('active');
+    menu.classList.remove('active');
+    blurScreen.classList.remove('active');
+  }
+});
