@@ -197,19 +197,35 @@ main .other-news {
   overflow: hidden;
 }
 .other-news .btm-img {
-  width: 100px;
+  height: 130px;
   overflow: hidden;
   margin-right: 10px;
 }
 .btm-img img {
-  max-width: 100%;
-  /* height: 100px; */
+  height: 130px;
 }
 
 .other-news div h1 {
   color: var(--grayishBlue);
   letter-spacing: 1.5px;
 }
+
+.other-news div h3 {
+  color: var(--veryDarkBlue);
+  transition: all ease-in-out 0.35s;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--boldInter);
+}
+.other-news:hover div h3 {
+  color: var(--softRed);
+}
+.other-news div p {
+  font-size: 15px;
+  color: var(--darkGrayishBlue);
+  line-height: 26px;
+}
+
 @media screen and (max-width: 800px) {
   nav {
     padding: 0 5%;
