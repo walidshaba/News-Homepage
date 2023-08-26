@@ -193,16 +193,16 @@ main .side-article {
 main .other-news {
   margin-top: 50px;
   display: flex;
-
   overflow: hidden;
 }
 .other-news .btm-img {
-  height: 130px;
+  width: 140px;
+  max-height: 140px;
   overflow: hidden;
   margin-right: 10px;
 }
 .btm-img img {
-  height: 130px;
+  height: 100%;
 }
 
 .other-news div h1 {
