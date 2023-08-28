@@ -406,6 +406,9 @@ main .other-news {
     justify-content: space-between;
     flex-direction: column;
   }
+  .side-article div {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (max-width: 800px) {
   nav {
